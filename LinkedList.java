@@ -180,14 +180,7 @@ public class LinkedList {
 	 *        the node that will be removed from this list
 	 */
 	public void remove(Node node) {
-		int index = 0;
-		for (int i = 0; i < size; i++) {
-			if (node.equals(getNode(i))) {
-				index = i;
-				break;
-			}
-		}
-		remove(index);
+		remove(node.block);
 	}
 
 	/**
