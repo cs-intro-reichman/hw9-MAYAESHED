@@ -241,14 +241,12 @@ public class LinkedList {
 	 * A textual representation of this list, for debugging.
 	 */
 	public String toString() {
-		ListIterator itr = iterator();
-		StringBuilder str = new StringBuilder();
-		while (itr.hasNext()) {
-			str.append(itr.next());
-			if (itr.hasNext()) {
-				str.append(" "); // adds the space
-			}
+		String res = "";
+    	Node current = first;
+    	for(int i = 0 ; i < size ; i ++) {
+        	res += current.block.toString() + " "; 
+        	current = current.next; 
 		}
-		return str.toString();
-	}
+    	return res;
+    }
 }
